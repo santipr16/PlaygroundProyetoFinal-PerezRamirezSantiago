@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Taller Habitando La Cancion</title>
+    <style>
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav li {
+            margin: 0 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Inicio</a></li>
+            <li><a href="{% url 'listado_alumnos' %}">Listado de alumnos</a></li>
+            <li><a href="{% url 'listado_profesores' %}">Listado de profesores</a></li>
+            <li><a href="{% url 'listado_instrumentos' %}">Listado de instrumentos</a></li>
+            <li><a href="{% url 'agregar_alumno' %}">Agregar alumno</a></li>
+            <li><a href="{% url 'agregar_profesor' %}">Agregar profesor</a></li>
+            <li><a href="{% url 'agregar_instrumento' %}">Agregar instrumento</a></li>
+            <li><a href="{% url 'agregar_foto' %}">Agregar foto al blog</a></li>
+            <li><a href="{% url 'logout' %}">Cerrar Sesion</a></li>
+        </ul>
+    </nav>
+
+    {% block contenido %}
+    {% endblock %}
+</body>
+</html>

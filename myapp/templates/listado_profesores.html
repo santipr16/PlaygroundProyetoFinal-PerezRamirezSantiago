@@ -1,0 +1,33 @@
+{% extends 'home.html' %}
+
+{% block contenido %}
+    <h1>Listado de profesores</h1>
+
+    {% if profesores %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre: </th>
+                    <th>Apellido: </th>
+                    <th>Dirección: </th>
+                    <th>Correo electrónico: </th>
+                    <th>Teléfono: </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for profesor in profesores %}
+                    <tr>
+                        <td>{{ profesor.nombre }}</td>
+                        <td>{{ profesor.apellido }}</td>
+                        <td>{{ profesor.direccion }}</td>
+                        <td>{{ profesor.correo }}</td>
+                        <td>{{ profesor.telefono }}</td>
+                        <td>{{ profesor.foto }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>    
+        </table>    
+    {% else %}
+        No hay profesores registrados.
+    {% endif %}
+{% endblock %}

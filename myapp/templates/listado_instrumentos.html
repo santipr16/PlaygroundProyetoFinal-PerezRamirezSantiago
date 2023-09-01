@@ -1,0 +1,22 @@
+{% extends 'home.html' %}
+
+{% block contenido %}
+    <h1>Listado de instrumentos</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for instrumento in instrumentos %}
+                <tr>
+                    <td>{{ instrumento.nombre }}</td>
+                    <td>{{ instrumento.descripcion }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
